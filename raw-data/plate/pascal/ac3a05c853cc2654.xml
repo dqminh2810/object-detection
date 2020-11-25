@@ -1,0 +1,26 @@
+<annotation>
+  <folder>images</folder>
+  <filename>ac3a05c853cc2654.jpg</filename>
+  <path>drive/MyDrive/data/plate/images/ac3a05c853cc2654.jpg</path>
+  <source>
+    <database>OpenImages</database>
+  </source>
+  <size>
+    <width>768</width>
+    <height>1024</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>254</xmin>
+      <xmax>625</xmax>
+      <ymin>824</ymin>
+      <ymax>1009</ymax>
+    </bndbox>
+  </object>
+</annotation>

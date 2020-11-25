@@ -1,0 +1,98 @@
+<annotation>
+  <folder>images</folder>
+  <filename>a594b7edb2833257.jpg</filename>
+  <path>drive/MyDrive/data/kitchen knife/images/a594b7edb2833257.jpg</path>
+  <source>
+    <database>OpenImages</database>
+  </source>
+  <size>
+    <width>1024</width>
+    <height>683</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>17</xmin>
+      <xmax>298</xmax>
+      <ymin>215</ymin>
+      <ymax>308</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>54</xmin>
+      <xmax>103</xmax>
+      <ymin>316</ymin>
+      <ymax>555</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>105</xmin>
+      <xmax>561</xmax>
+      <ymin>579</ymin>
+      <ymax>625</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>108</xmin>
+      <xmax>408</xmax>
+      <ymin>383</ymin>
+      <ymax>424</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>145</xmin>
+      <xmax>521</xmax>
+      <ymin>455</ymin>
+      <ymax>492</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>284</xmin>
+      <xmax>461</xmax>
+      <ymin>246</ymin>
+      <ymax>383</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>424</xmin>
+      <xmax>531</xmax>
+      <ymin>212</ymin>
+      <ymax>361</ymax>
+    </bndbox>
+  </object>
+</annotation>

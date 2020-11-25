@@ -1,0 +1,26 @@
+<annotation>
+  <folder>images</folder>
+  <filename>054867d71726756e.jpg</filename>
+  <path>drive/MyDrive/data/kitchen knife/images/054867d71726756e.jpg</path>
+  <source>
+    <database>OpenImages</database>
+  </source>
+  <size>
+    <width>819</width>
+    <height>1024</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>3</xmin>
+      <xmax>551</xmax>
+      <ymin>293</ymin>
+      <ymax>594</ymax>
+    </bndbox>
+  </object>
+</annotation>

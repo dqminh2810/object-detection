@@ -1,0 +1,26 @@
+<annotation>
+  <folder>images</folder>
+  <filename>36e2e839f45e92f4.jpg</filename>
+  <path>drive/MyDrive/data/fork/images/36e2e839f45e92f4.jpg</path>
+  <source>
+    <database>OpenImages</database>
+  </source>
+  <size>
+    <width>619</width>
+    <height>1024</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>fork</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>260</xmin>
+      <xmax>357</xmax>
+      <ymin>126</ymin>
+      <ymax>919</ymax>
+    </bndbox>
+  </object>
+</annotation>

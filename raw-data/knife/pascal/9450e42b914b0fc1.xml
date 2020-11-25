@@ -1,0 +1,26 @@
+<annotation>
+  <folder>images</folder>
+  <filename>9450e42b914b0fc1.jpg</filename>
+  <path>drive/MyDrive/data/knife/images/9450e42b914b0fc1.jpg</path>
+  <source>
+    <database>OpenImages</database>
+  </source>
+  <size>
+    <width>682</width>
+    <height>1024</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>99</xmin>
+      <xmax>487</xmax>
+      <ymin>539</ymin>
+      <ymax>978</ymax>
+    </bndbox>
+  </object>
+</annotation>
