@@ -2,7 +2,7 @@
 Mini project allow to detect objects by using R-CNN
 
 # Project structure
-.
+```
 ├───dataset              // dataset used to feed our model
 │   ├───testing
 │   └───training
@@ -35,7 +35,7 @@ Mini project allow to detect objects by using R-CNN
 ├────object_detector_simple.h5        // saved model
 ├────label_encoder_simple.pickle      // saved label encoder
 ├────plot_simple.png                  // model evaluation plot
-
+```
 # Utilisation
 
 - Build dataset for object classifier from raw data 
