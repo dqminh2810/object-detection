@@ -64,4 +64,4 @@ MODEL_PATH = "object_detector_simple.h5"
 ENCODER_PATH = "label_encoder_simple.pickle"
 # define the minimum probability required for a positive prediction
 # (used to filter out false-positive predictions)
-MIN_PROBA = 0.90
+MIN_PROBA = 0.98
