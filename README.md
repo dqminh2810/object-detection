@@ -66,3 +66,9 @@ Mini project allow to detect objects by using R-CNN
  - Detect objects on a given image
 
  `python detect_object_rcnn_simple.py --image path_to_image`
+
+__ **Note**  __
+ `After getting the src code, you can run the object detection program directly by executing the command of detect objects above. The saved classifier model as oject_detector_simple.h5 will be used in the case`
+
+*Example*
+`python detect_object_rcnn_simple.py --image dataset/testing/knife.jpg`
