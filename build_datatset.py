@@ -1,5 +1,4 @@
 # take raw data and create dataset which will be used to fine-tune a MobileNet V2 model (a pre-trained on the ImageNet dataset) 
-# TODO
 
 # import the necessary packages
 from pyimagesearch.iou import compute_iou
@@ -9,6 +8,9 @@ from imutils import paths
 import cv2
 import os
 
+####################################
+### GET POSITIVE PROPOSAL REGIONS ###
+####################################
 def getPositiveRois(classe, imagePaths, totalAdding):
     # loop over the image paths
     for (i, imagePath) in enumerate(imagePaths):
@@ -94,10 +96,11 @@ def getPositiveRois(classe, imagePaths, totalAdding):
                 roi = cv2.resize(roi, config.INPUT_DIMS, interpolation=cv2.INTER_CUBIC)
                 cv2.imwrite(outputPath, roi)
 
-
+#####################################
+### GET NEGATIVE PROPOSAL REGIONS ###
+#####################################
 def getNegativeRois(classe, imagePaths, totalAdding):
     # loop over the image paths
-    if totalAdding < 500:
         for (i, imagePath) in enumerate(imagePaths):
             # show a progress report
             print("[INFO] processing image {}/{} to get negative rois of class {} --- total negative features adding .... {}".format(i + 1,len(imagePaths), classe, totalAdding))
@@ -167,7 +170,7 @@ def getNegativeRois(classe, imagePaths, totalAdding):
                 negativeROIs = 0
 
                 # loop over the maximum number of region proposals
-            for proposedRect in proposedRects[:config.MAX_PROPOSALS]:
+            for proposedRect in proposedRects[:config.MAX_PROPOSALS_INFER]:
                 # unpack the proposed rectangle bounding box
                 (propStartX, propStartY, propEndX, propEndY) = proposedRect
 
@@ -240,17 +243,22 @@ def getNegativeRois(classe, imagePaths, totalAdding):
                         cv2.imwrite(outputPath, roi)
 
                     # we take only 500 features of negative class
-                    if totalAdding == 500:
-                        break
+                    #if totalAdding == 500:
+                        #break
 
 
 
+###################################
+### PREPARE DATASET TO TRAINING ###
+###################################
+# paths contains training images
 img_paths = [config.SIMPLE_FORK_TRAINING_BASE_PATH, 
                 config.SIMPLE_KNIFE_TRAINING_BASE_PATH, 
                 config.SIMPLE_PLATE_TRAINING_BASE_PATH,
                 config.SIMPLE_NO_FORK_TRAINING_BASE_PATH,
                 config.SIMPLE_NO_KNIFE_TRAINING_BASE_PATH,
                 config.SIMPLE_NO_PLATE_TRAINING_BASE_PATH]
+
 # loop over the output positive and negative directories
 for dirPath in img_paths:
     # if the output directory does not exist yet, create it
@@ -273,13 +281,12 @@ totalPlate_negative = 0
 
 
 # Get Positive rois
-'''
 getPositiveRois("fork", fork_imagePaths, totalFork_positive)
 getPositiveRois("knife", knife_imagePaths, totalKnife_positive)
 getPositiveRois("plate", plate_imagePaths, totalPlate_positive)
-'''
+
 # Get Negative rois
-# getNegativeRois("fork", fork_imagePaths, totalFork_negative)
-# getNegativeRois("knife", knife_imagePaths, totalKnife_negative)
+getNegativeRois("fork", fork_imagePaths, totalFork_negative)
+getNegativeRois("knife", knife_imagePaths, totalKnife_negative)
 getNegativeRois("plate", plate_imagePaths, totalPlate_negative)
 
