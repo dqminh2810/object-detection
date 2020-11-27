@@ -36,9 +36,9 @@ Mini project allow to detect objects by using R-CNN
 ├────label_encoder_simple.pickle      // saved label encoder
 ├────plot_simple.png                  // model evaluation plot
 ```
-# Utilisation
+# Utilization
 
-- Build dataset for object classifier from raw data 
+- Build dataset from raw data in order to feed object classifier 
 `python buil_dataset.py`
 
  - Train classification model
