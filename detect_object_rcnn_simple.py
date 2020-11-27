@@ -21,6 +21,10 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="path to input image")
 args = vars(ap.parse_args())
 
+
+####################################
+### LOAD PREPAREDMODEL AND LABEL ###
+####################################
 # load the our fine-tuned model and label binarizer from disk
 print("[INFO] loading model and label binarizer...")
 model = load_model(config.MODEL_PATH)
@@ -30,6 +34,10 @@ lb = pickle.loads(open(config.ENCODER_PATH, "rb").read())
 image = cv2.imread(args["image"])
 image = imutils.resize(image, width=1000)
 
+
+############################
+### GET PROPOSAL REGIONS ###
+############################
 # run selective search on the image to generate bounding box proposal regions
 print("[INFO] running selective search...")
 ss = cv2.ximgproc.segmentation.createSelectiveSearchSegmentation()
@@ -66,20 +74,10 @@ boxes = np.array(boxes, dtype="int32")
 print("[INFO] proposal shape: {}".format(proposals.shape))
 print("[INFO] boxes shape: {}".format(boxes.shape))
 
-'''
-clone = image.copy()
 
-for box in boxes:
-    # draw the bounding box, label, and probability on the image
-    (startX, startY, endX, endY) = box
-    cv2.rectangle(clone, (startX, startY), (endX, endY), (0, 255, 0), 2)
-    y = startY - 10 if startY - 10 > 10 else startY + 10
-
-# show the output after *before* running NMS
-cv2.imshow("ROI", clone)
-cv2.waitKey(0)
-'''
-
+##################################################
+### APPLY CLASSIFIER MODEL ON PROPOSAL REGIONS ###
+##################################################
 # classify each of the proposal ROIs using fine-tuned model
 print("[INFO] classifying proposals...")
 proba = model.predict(proposals)
@@ -106,15 +104,18 @@ proba_plate = proba[idxs_plate][:, 1]
 # further filter indexes by enforcing a minimum prediction
 # probability be met
 
-idxs_fork = np.where((proba_fork >= config.MIN_PROBA) | (proba_fork == np.amax(proba_fork)))
-boxes_fork = boxes_fork[idxs_fork]
-proba_fork = proba_fork[idxs_fork]
-idxs_knife = np.where((proba_knife >= config.MIN_PROBA) | (proba_knife == np.amax(proba_knife)))
-boxes_knife = boxes_knife[idxs_knife]
-proba_knife = proba_knife[idxs_knife]
-idxs_plate = np.where((proba_plate >= config.MIN_PROBA) | (proba_plate == np.amax(proba_plate)))
-boxes_plate = boxes_plate[idxs_plate]
-proba_plate = proba_plate[idxs_plate]
+if(len(proba_fork) > 0):
+    idxs_fork = np.where((proba_fork >= config.MIN_PROBA) | (proba_fork == np.amax(proba_fork)))
+    boxes_fork = boxes_fork[idxs_fork]
+    proba_fork = proba_fork[idxs_fork]
+if(len(proba_knife) > 0):
+    idxs_knife = np.where((proba_knife >= config.MIN_PROBA) | (proba_knife == np.amax(proba_knife)))
+    boxes_knife = boxes_knife[idxs_knife]
+    proba_knife = proba_knife[idxs_knife]
+if(len(proba_plate) > 0):
+    idxs_plate = np.where((proba_plate >= config.MIN_PROBA) | (proba_plate == np.amax(proba_plate)))
+    boxes_plate = boxes_plate[idxs_plate]
+    proba_plate = proba_plate[idxs_plate]
 
 
 print(proba_fork)
@@ -122,7 +123,9 @@ print(proba_knife)
 print(proba_plate)
 
 
-
+#########################################################
+### SHOW OBJECT DETECTION RESULTS BEFORE & AFTER NMS  ###
+#########################################################
 # clone the original image so that we can draw on it
 clone = image.copy()
 
