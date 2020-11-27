@@ -36,13 +36,33 @@ Mini project allow to detect objects by using R-CNN
 ├────label_encoder_simple.pickle      // saved label encoder
 ├────plot_simple.png                  // model evaluation plot
 ```
+# Technologies used
+
+- Python v3.7.2
+- pip v9.0.3
+
+# Python libraries used
+
+- OpenCV Python
+- bs4
+- Tensorflow
+- matplotlib
+- argparse
+- numpy
+- imutils
+- pickle
+- os
+
 # Utilization
 
 - Build dataset from raw data in order to feed object classifier 
+
 `python buil_dataset.py`
 
  - Train classification model
+
  `python fine_tune_rcnn_simpe.py`
 
  - Detect objects on a given image
+
  `python detect_object_rcnn_simple.py --image path_to_image`
