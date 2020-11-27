@@ -1,7 +1,7 @@
 <annotation>
   <folder>images</folder>
   <filename>03e4bb9a4c3685b7.jpg</filename>
-  <path>drive/MyDrive/data/knife/images/03e4bb9a4c3685b7.jpg</path>
+  <path>drive/MyDrive/data/kitchen knife/images/03e4bb9a4c3685b7.jpg</path>
   <source>
     <database>OpenImages</database>
   </source>
@@ -12,15 +12,15 @@
   </size>
   <segmented>0</segmented>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>40</xmin>
-      <xmax>982</xmax>
+      <xmin>41</xmin>
+      <xmax>981</xmax>
       <ymin>89</ymin>
-      <ymax>240</ymax>
+      <ymax>244</ymax>
     </bndbox>
   </object>
 </annotation>

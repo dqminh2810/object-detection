@@ -1,7 +1,7 @@
 <annotation>
   <folder>images</folder>
   <filename>28a0006dfc36df70.jpg</filename>
-  <path>drive/MyDrive/data/knife/images/28a0006dfc36df70.jpg</path>
+  <path>drive/MyDrive/data/kitchen knife/images/28a0006dfc36df70.jpg</path>
   <source>
     <database>OpenImages</database>
   </source>
@@ -12,39 +12,51 @@
   </size>
   <segmented>0</segmented>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>215</xmin>
-      <xmax>512</xmax>
-      <ymin>16</ymin>
-      <ymax>326</ymax>
+      <xmin>217</xmin>
+      <xmax>516</xmax>
+      <ymin>19</ymin>
+      <ymax>325</ymax>
     </bndbox>
   </object>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>298</xmin>
-      <xmax>582</xmax>
-      <ymin>66</ymin>
-      <ymax>415</ymax>
+      <xmin>296</xmin>
+      <xmax>576</xmax>
+      <ymin>69</ymin>
+      <ymax>418</ymax>
     </bndbox>
   </object>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>363</xmin>
-      <xmax>668</xmax>
-      <ymin>152</ymin>
-      <ymax>541</ymax>
+      <xmin>356</xmin>
+      <xmax>666</xmax>
+      <ymin>156</ymin>
+      <ymax>544</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>kitchen knife</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>451</xmin>
+      <xmax>760</xmax>
+      <ymin>237</ymin>
+      <ymax>678</ymax>
     </bndbox>
   </object>
 </annotation>

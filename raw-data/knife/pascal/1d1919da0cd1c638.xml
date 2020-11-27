@@ -1,7 +1,7 @@
 <annotation>
   <folder>images</folder>
   <filename>1d1919da0cd1c638.jpg</filename>
-  <path>drive/MyDrive/data/knife/images/1d1919da0cd1c638.jpg</path>
+  <path>drive/MyDrive/data/kitchen knife/images/1d1919da0cd1c638.jpg</path>
   <source>
     <database>OpenImages</database>
   </source>
@@ -12,63 +12,63 @@
   </size>
   <segmented>0</segmented>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>10</xmin>
+      <xmin>12</xmin>
       <xmax>958</xmax>
       <ymin>686</ymin>
-      <ymax>811</ymax>
+      <ymax>814</ymax>
     </bndbox>
   </object>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>17</xmin>
-      <xmax>600</xmax>
-      <ymin>306</ymin>
-      <ymax>382</ymax>
+      <xmin>16</xmin>
+      <xmax>598</xmax>
+      <ymin>307</ymin>
+      <ymax>380</ymax>
     </bndbox>
   </object>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>35</xmin>
-      <xmax>1002</xmax>
-      <ymin>539</ymin>
-      <ymax>642</ymax>
+      <xmin>37</xmin>
+      <xmax>992</xmax>
+      <ymin>545</ymin>
+      <ymax>638</ymax>
     </bndbox>
   </object>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
       <xmin>119</xmin>
       <xmax>890</xmax>
-      <ymin>418</ymin>
-      <ymax>511</ymax>
+      <ymin>421</ymin>
+      <ymax>508</ymax>
     </bndbox>
   </object>
   <object>
-    <name>knife</name>
+    <name>kitchen knife</name>
     <pose>Unspecified</pose>
     <truncated>0</truncated>
     <difficult>0</difficult>
     <bndbox>
-      <xmin>218</xmin>
+      <xmin>226</xmin>
       <xmax>1006</xmax>
-      <ymin>210</ymin>
-      <ymax>296</ymax>
+      <ymin>202</ymin>
+      <ymax>307</ymax>
     </bndbox>
   </object>
 </annotation>
