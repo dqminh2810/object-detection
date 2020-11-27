@@ -15,9 +15,9 @@ Mini project allow to detect objects by using R-CNN
 │           ├───no_plate [1026 entries]
 │           └───plate    [964 entries]
 ├───pyimagesearch
-|	├───config.py        // R-CNN model config file
-│   ├───iou.py           // IoU method
-│   └───nms.py           // NMS method
+│       ├───noconfig.py        // R-CNN model config file
+│       ├───noiou.py           // IoU method
+│       └───plnms.py           // NMS method
 ├───raw-data			 // raw data downloaded form open images base
 │   ├───fork
 │   │   ├───images       [411 entries]
@@ -28,7 +28,7 @@ Mini project allow to detect objects by using R-CNN
 │   └───plate
 │       ├───images       [732 entries]
 │       └───pascal       [732 entries]
-├────results                          // results of objects detection R-CNN model
+├────results
 ├────build_dataset.py                 // transform raw-data to dataset used to feed our model
 ├────detect_object_rcnn_simple.py     // final code used to detect objects on a given image
 ├────fine_tune_rcnn_simple.py         // build classification model on dataset
